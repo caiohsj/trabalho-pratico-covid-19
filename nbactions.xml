@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-redeploy</actionName>
+            <displayName>redeploy</displayName>
+            <goals>
+                <goal>clean</goal>
+                <goal>install</goal>
+                <goal>tomcat7:redeploy</goal>
+            </goals>
+        </action>
+    </actions>

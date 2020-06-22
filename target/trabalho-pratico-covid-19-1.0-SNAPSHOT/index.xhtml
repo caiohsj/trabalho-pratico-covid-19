@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Covid 19</title>
+    </h:head>
+
+    <h:body>
+        <p:panel header="Upload de Planilha">
+            <h:form enctype="multipart/form-data">
+                <h:panelGrid columns="2" cellpadding="5">
+                    <p:fileUpload value="#{uploadMB.file}" mode="simple" skinSimple="true"></p:fileUpload>
+                    <p:commandButton value="Upload" action="#{uploadMB.upload}" ajax="false"></p:commandButton>
+                </h:panelGrid>
+            </h:form>
+        </p:panel>
+        <p:spacer/>
+        <p:panel header="Exemplos Gráficos">
+            <p:panelGrid columns="2" layout="grid">
+                <p:chart type="bar" model="#{uploadMB.model}" responsive="true"/>
+            </p:panelGrid>
+        </p:panel>
+    </h:body>
+</html>
+
