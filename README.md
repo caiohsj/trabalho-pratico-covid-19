@@ -1,4 +1,4 @@
-# Open Source Boilerplate
+# Trabalho da disciplina de Linguagem de Programação 4
 
 [![licence mit](https://img.shields.io/github/license/caiohsj/trabalho-pratico-covid-19.svg)](https://github.com/caiohsj/trabalho-pratico-covid-19/blob/master/LICENSE)
 
@@ -6,4 +6,4 @@
 
 
 ## License
-[MIT License](https://github.com/caiohsj/open-source-boilerplate/blob/master/LICENSE) © [Caio]()
+[MIT License](https://github.com/caiohsj/trabalho-pratico-covid-19/blob/master/LICENSE) © [Caio]()
