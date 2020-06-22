@@ -4,6 +4,12 @@
 
 > :rocket: A template to help you create open source projects more organized.
 
+# Requisitos
+* Configure um DataSource com o name "trabalho_pratico" no seu servidor Apache Tomcat
+* Execute o comando
+  * mvn clean install
+* Inicie seu servidor Apache Tomcat
+* Faça o deploy do arquivo .war no diretório /target
 
 ## License
 [MIT License](https://github.com/caiohsj/trabalho-pratico-covid-19/blob/master/LICENSE) © [Caio]()
