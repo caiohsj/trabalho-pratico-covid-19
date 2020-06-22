@@ -65,33 +65,11 @@ public class UploadMB {
     }
 
     public void inicializarSeries() {
-//        List<Object[]> notificacoes = entityManager.createQuery("SELECT n.semanaEpi, SUM(n.casosNovos) FROM NotificacaoCovid n GROUP BY n.semanaEpi").getResultList();
-//        HashMap<String, ChartSeries> seriesMap = new HashMap();
-//        ChartSeries series;
-//        for (Object[] object: notificacoes) {
-//            System.out.println(object[1]);
-//            series = new ChartSeries(String.valueOf(object[0]));
-//            series.set(String.valueOf(object[0]), (Number) object[1]);
-//            model.addSeries(series);
-//        }
-
-        List<NotificacaoCovid> notificacoes = entityManager.createQuery("SELECT n FROM NotificacaoCovid n").getResultList();
-        HashMap<Integer, Semana> semanasMap = new HashMap();
-        ChartSeries series;
-        Semana semana;
-        for (NotificacaoCovid notificacao : notificacoes) {
-            if (semanasMap.containsKey(notificacao.getSemanaEpi())) {
-                semana = semanasMap.get(notificacao.getSemanaEpi());
-                semana.setCasosNovos(semana.getCasosNovos() + notificacao.getCasosNovos());
-            } else {
-                semana = new Semana(notificacao.getSemanaEpi(), notificacao.getCasosNovos());
-                semanasMap.put(notificacao.getSemanaEpi(), semana);
-            }
-        }
-
-        series = new ChartSeries("Casos");
-        for (Semana sem : semanasMap.values()) {
-            series.set(String.valueOf(sem.getSemanaEpi()), sem.getCasosNovos());
+        List<Object[]> notificacoes = entityManager.createQuery("SELECT n.semanaEpi, SUM(n.casosNovos) FROM NotificacaoCovid n GROUP BY n.semanaEpi").getResultList();
+        HashMap<String, ChartSeries> seriesMap = new HashMap();
+        ChartSeries series = new ChartSeries("Casos");
+        for (Object[] object: notificacoes) {
+            series.set(String.valueOf(object[0]), (Number) object[1]);
         }
         model.addSeries(series);
     }
