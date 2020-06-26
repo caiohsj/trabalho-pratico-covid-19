@@ -9,7 +9,7 @@
 * Execute o comando
   * mvn clean install
 * Inicie seu servidor Apache Tomcat
-* Faça o deploy do arquivo .war no diretório /target
+* Faça o deploy do arquivo .war no diretório /dist
 * Acesse a url do seu servidor no caminho > /trabalho-pratico-covid-19/index.jsf
 
 ## License
